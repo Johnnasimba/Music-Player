@@ -67,6 +67,13 @@ function loadSong(song) {
 
 // Current Song 
 let songIndex = 0;
+// Previous Song
+function prevSong() {
+    songIndex--;
+    loadSong(songs[songIndex]);
+    playSong();
+
+}
 // Next Song
 function nextSong() {
     songIndex++;
