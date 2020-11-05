@@ -70,12 +70,18 @@ let songIndex = 0;
 // Previous Song
 function prevSong() {
     songIndex--;
+    if (songIndex < 0) {
+        songIndex = songs.length - 1;
+    }
     loadSong(songs[songIndex]);
     playSong();
 
 }
 // Next Song
 function nextSong() {
+    if ( songIndex > songs.length - 1) {
+        songIndex = 0;
+    }
     songIndex++;
     loadSong(songs[songIndex]);
     playSong();
