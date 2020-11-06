@@ -34,7 +34,6 @@ const songs = [
       artist: 'Metric/Jacinto Design',
     },
   ];
-  
 
 // Check is Playing 
 let isPlaying = false
@@ -67,8 +66,6 @@ function loadSong(song) {
     music.src = `music/${song.name}.mp3`;
     image.src = `img/${song.name}.jpg`;
 }
-
-
 // Current Song 
 let songIndex = 0;
 // Previous Song
@@ -79,7 +76,6 @@ function prevSong() {
     }
     loadSong(songs[songIndex]);
     playSong();
-
 }
 // Next Song
 function nextSong() {
@@ -91,7 +87,6 @@ function nextSong() {
     playSong();
 
 }
-
 // on Load - Select First Song
 loadSong(songs[songIndex]);
 
@@ -127,8 +122,6 @@ function setProgressBar(e) {
   const clickX = e.offsetX;
   const { duration } = music;
   music.currentTime = ((clickX / width) * duration)
-
-
 }
 
 // Event Listeners 
